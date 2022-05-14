@@ -1,14 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int i,a,b,lcm,gcd;
+    int a,b,i;
     scanf("%d%d",&a,&b);
-    for(i=1;i<=a;i++)
+    for(i=a;i<=b*a;i++)
     {
-        if(a%i==0 && b%i==0)
-        gcd=i;
+        if(i%a==0 && i%b==0)
+        {
+            printf("%d",i);
+            break;
+        }
     }
-    lcm=(a*b)/gcd;
-    printf("%d",lcm);
-    return 0;
 }
